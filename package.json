@@ -1,0 +1,18 @@
+{
+  "name": "youtube-mp4-downloader",
+  "version": "1.0.0",
+  "description": "YouTube MP4 Downloader using Node.js and Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^3.0.1",
+    "ytdl-core": "^4.9.1"
+  }
+}
