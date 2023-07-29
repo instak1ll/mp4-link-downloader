@@ -18,10 +18,15 @@ app.get("/download", async (req, res) => {
     try {
         const info = await ytdl.getInfo(videoUrl);
         const videoTitle = info.videoDetails.title.replace(/[^a-zA-Z0-9]/g, "_");
+        const format = ytdl.chooseFormat(info.formats, { quality: 'highest' });
+        const filteredFormats = info.formats.filter((format) => {
+            return format.height && format.height >= 720;
+        });
+        const selectedFormat = ytdl.chooseFormat(filteredFormats, { quality: 'highest' });
+
         res.header("Content-Disposition", `attachment; filename="${videoTitle}.mp4"`);
         ytdl(videoUrl, {
-            format: "mp4",
-            quality: "highest",
+            format: selectedFormat
         }).pipe(res);
     } catch (error) {
         console.error("Error:", error.message);
