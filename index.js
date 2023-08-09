@@ -192,7 +192,7 @@ app.get("/info", async (req, res) => {
                     font-weight: 700;
                     color: #444;
                     line-height: 1.3;
-                    padding: 10px;
+                    padding: 10px 30px 10px 10px;
                     margin-right: 10px !important;
                     box-sizing: border-box;
                     border: 1px solid #aaa;
