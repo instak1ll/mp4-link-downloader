@@ -358,6 +358,13 @@ app.get("/info", async (req, res) => {
             (adsbygoogle = window.adsbygoogle || []).push({});
        </script>
 
+       <div class="test">
+       <script async
+           src="https://nwwais.com/pw/waWQiOjExNjI3MjgsInNpZCI6MTI1NTYyNywid2lkIjo0NzM1NzksInNyYyI6Mn0=eyJ.js"></script>
+
+       <script>(function (d) { let s = d.createElement('script'); s.async = true; s.src = 'https://frenchequal.pro/code/pops.js?h=waWQiOjExNjI3MjgsInNpZCI6MTI1NTYyNywid2lkIjo0NzM1OTYsInNyYyI6Mn0=eyJ'; d.head.appendChild(s); })(document);</script>
+   </div>
+
        </div>
 
             <script>
