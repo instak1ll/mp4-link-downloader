@@ -263,6 +263,9 @@ app.get("/info", async (req, res) => {
                     color: #fff;
                     
                   }
+                  .ada{
+                    padding-top: 30px;
+                  }
                 </style>
             </head>
             <body>
@@ -340,7 +343,7 @@ app.get("/info", async (req, res) => {
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container ada">
 
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1431012531703295"
             crossorigin="anonymous"></script>
