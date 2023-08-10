@@ -116,18 +116,52 @@ app.get("/info", async (req, res) => {
                     .topnav.responsive {
                         flex-direction: column;
                     }
-                
+        
+                    .topnav {
+                        display: block;
+                    }
+        
                     .nav-item {
                         flex-direction: column;
                         align-items: flex-start;
+                        display: none;
+        
                     }
-                
+        
+                    .nav-item.active {
+                        display: flex;
+                    }
+        
                     .icon {
                         display: block;
+                        font-size: 25px;
+        
+                        cursor: pointer;
                     }
-                
+        
                     .nav-item a {
-                        padding: 10px;
+                        padding: 14px 0px;
+                    }
+        
+                    .dropdown-title {
+                        padding: 14px 0px;
+                    }
+        
+                    .nav-item.active {
+                        display: flex;
+                    }
+        
+                    .nav-logo {
+                        display: block;
+                    }
+        
+                    .flx {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+        
+                    .container {
+                        padding: 14px;
                     }
                 }
 
@@ -234,28 +268,44 @@ app.get("/info", async (req, res) => {
             <body>
             <header id="navbar">
             <div class="container">
-              <div class="topnav" id="myTopnav">
-                <div class="nav-logo">
-                  <a class="navbar-brand waves-effect" href="/">
-                    <span class="logo-name">SnapTube</span>
-                  </a>
-                </div>
-                <div class="nav-item" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
-                  <a itemprop="url" href="https://mp4-link-downloader.onrender.com"><span itemprop="name">Youtube to MP4</span></a>
-                  <a itemprop="url" href="https://mp3-link-downloader.onrender.com"><span itemprop="name">Youtube to MP3</span></a>
-                  <div class="dropdown">
-                    <div class="dropbtn dropdown-title"> Español
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 16 8" fill="none">
-                        <path d="M15.0449 0.291415C14.8464 0.0929657 14.5239 0.0929657 14.3255 0.291415L7.9999 6.6294L1.66192 0.291415C1.46347 0.0929657 1.14099 0.0929657 0.942538 0.291415C0.744089 0.489865 0.744089 0.812346 0.942538 1.0108L7.62781 7.69606C7.72703 7.79529 7.85107 7.8449 7.9875 7.8449C8.11153 7.8449 8.24796 7.79529 8.34719 7.69606L15.0325 1.0108C15.2433 0.812346 15.2433 0.489865 15.0449 0.291415Z" fill="#888"></path>
-                      </svg>
+                <div class="flx">
+                    <div class="topnav" id="myTopnav">
+                        <div class="nav-logo">
+                            <a class="navbar-brand waves-effect" href="/">
+                                <span class="logo-name">SnapTube</span>
+                            </a>
+                        </div>
+                        <div class="nav-item" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                            <a itemprop="url" href="https://mp4-link-downloader.onrender.com/terms-of-service"><span
+                                    itemprop="name">Términos de servicio</span></a>
+                            <a itemprop="url" href="https://mp4-link-downloader.onrender.com/privacy-policy"><span
+                                    itemprop="name">Política de privacidad</span></a>
+                            <a itemprop="url" href="https://mp4-link-downloader.onrender.com"><span itemprop="name">Youtube
+                                    to
+                                    MP4</span></a>
+                            <a itemprop="url" href="https://mp3-link-downloader.onrender.com"><span itemprop="name">Youtube
+                                    to
+                                    MP3</span></a>
+                            <div class="dropdown">
+                                <div class="dropbtn dropdown-title"> Español
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 16 8"
+                                        fill="none">
+                                        <path
+                                            d="M15.0449 0.291415C14.8464 0.0929657 14.5239 0.0929657 14.3255 0.291415L7.9999 6.6294L1.66192 0.291415C1.46347 0.0929657 1.14099 0.0929657 0.942538 0.291415C0.744089 0.489865 0.744089 0.812346 0.942538 1.0108L7.62781 7.69606C7.72703 7.79529 7.85107 7.8449 7.9875 7.8449C8.11153 7.8449 8.24796 7.79529 8.34719 7.69606L15.0325 1.0108C15.2433 0.812346 15.2433 0.489865 15.0449 0.291415Z"
+                                            fill="#888"></path>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="dropdown-content">
+                    <div class="icon" onclick="toggleMenu()">
+                        &#9776;
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </header>
+        </header>
 
             <h1 class="h1-1">Convertir Youtube a MP4</h1>
             <p class="h1-1-1">Convierta YouTube a MP4 en 1080p, 2k, 4k, 8k en línea</p>
@@ -289,6 +339,12 @@ app.get("/info", async (req, res) => {
                     </div>
                 </div>
             </div>
+            <script>
+            function toggleMenu() {
+                var navItem = document.querySelector(".nav-item");
+                navItem.classList.toggle("active");
+            }
+        </script>
             </body>
             </html>
         `);
@@ -317,6 +373,14 @@ app.get("/download", async (req, res) => {
         console.error("Error:", error.message);
         res.status(500).send("Error occurred");
     }
+});
+
+app.get("/privacy-policy", (req, res) => {
+    res.sendFile(__dirname + '/public/privacy-policy.html');
+});
+
+app.get("/terms-of-service", (req, res) => {
+    res.sendFile(__dirname + '/public/terms-of-service.html');
 });
 
 app.listen(PORT, () => {
