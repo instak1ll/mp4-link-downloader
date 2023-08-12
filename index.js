@@ -112,58 +112,7 @@ app.get("/info", async (req, res) => {
                     cursor: pointer;
                 }
                 
-                @media screen and (max-width: 600px) {
-                    .topnav.responsive {
-                        flex-direction: column;
-                    }
-        
-                    .topnav {
-                        display: block;
-                    }
-        
-                    .nav-item {
-                        flex-direction: column;
-                        align-items: flex-start;
-                        display: none;
-        
-                    }
-        
-                    .nav-item.active {
-                        display: flex;
-                    }
-        
-                    .icon {
-                        display: block;
-                        font-size: 25px;
-        
-                        cursor: pointer;
-                    }
-        
-                    .nav-item a {
-                        padding: 14px 0px;
-                    }
-        
-                    .dropdown-title {
-                        padding: 14px 0px;
-                    }
-        
-                    .nav-item.active {
-                        display: flex;
-                    }
-        
-                    .nav-logo {
-                        display: block;
-                    }
-        
-                    .flx {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-        
-                    .container {
-                        padding: 14px;
-                    }
-                }
+
 
                 .h1-1 {
                     text-align: center;
@@ -266,6 +215,190 @@ app.get("/info", async (req, res) => {
                   .ada{
                     padding-top: 30px;
                   }
+
+                  @media screen and (max-width: 1010px) {
+                    .topnav.responsive {
+                        flex-direction: column;
+                    }
+        
+                    .topnav {
+                        display: block;
+                    }
+        
+                    .nav-item {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        display: none;
+        
+                    }
+        
+                    .nav-item.active {
+                        display: flex;
+                    }
+        
+                    .icon {
+                        display: block;
+                        font-size: 25px;
+        
+                        cursor: pointer;
+                    }
+        
+                    .nav-item a {
+                        padding: 14px 0px;
+                    }
+        
+                    .dropdown-title {
+                        padding: 14px 0px;
+                    }
+        
+                    .nav-item.active {
+                        display: flex;
+                    }
+        
+                    .nav-logo {
+                        display: block;
+                    }
+        
+                    .flx {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+        
+                    .container {
+                        padding: 14px;
+                    }
+
+                    .container-principal {
+                        padding: 14px;
+                    }
+                
+                    .container-1 {
+                        padding: 10px;
+                    }
+                
+                    .container-1 {
+                        flex-direction: column; /* Display items in a column */
+                        align-items: center; /* Center content horizontally */
+                    }
+                
+                    .img-1 {
+                        max-width: 100%; /* Make sure the image doesn't overflow */
+                        height: auto;
+                        margin-left: 10px;
+                        padding-bottom:10px;
+                    }
+                
+                    .select-and-button {
+                        flex-direction: column; /* Display select and button in a column */
+                    }
+
+                    .form-control-small{
+                        width: 150px;
+                        margin-right: 0px !important;
+                    }
+                    .select-1 {
+                        margin-right: 0px !important;
+                    }
+                    .resname{
+                        display:none;
+                    }
+
+                    .nametit{
+                        padding-bottom:10px;
+                    }
+                }
+
+                  @media screen and (max-width: 600px) {
+                    .topnav.responsive {
+                        flex-direction: column;
+                    }
+                    .nametit{
+                        font-size: 14px;
+                        padding-bottom:10px;
+                    }
+                    .resname{
+                        display:none;
+                    }
+        
+                    .topnav {
+                        display: block;
+                    }
+        
+                    .nav-item {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        display: none;
+        
+                    }
+        
+                    .nav-item.active {
+                        display: flex;
+                    }
+        
+                    .icon {
+                        display: block;
+                        font-size: 25px;
+        
+                        cursor: pointer;
+                    }
+        
+                    .nav-item a {
+                        padding: 14px 0px;
+                    }
+        
+                    .dropdown-title {
+                        padding: 14px 0px;
+                    }
+        
+                    .nav-item.active {
+                        display: flex;
+                    }
+        
+                    .nav-logo {
+                        display: block;
+                    }
+        
+                    .flx {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+        
+                    .container {
+                        padding: 14px;
+                    }
+
+                    .container-principal {
+                        padding: 14px;
+                    }
+                
+                    .container-1 {
+                        padding: 10px;
+                    }
+                
+                    .container-1 {
+                        flex-direction: column; /* Display items in a column */
+                        align-items: center; /* Center content horizontally */
+                    }
+                
+                    .img-1 {
+                        max-width: 100%; /* Make sure the image doesn't overflow */
+                        height: auto;
+                        margin-left: 10px;
+                        padding-bottom:10px;
+                    }
+                
+                    .select-and-button {
+                        flex-direction: column; /* Display select and button in a column */
+                    }
+
+                    .form-control-small{
+                        width: 150px;
+                        margin-right: 0px !important;
+                    }
+                    .select-1 {
+                        margin-right: 0px !important;
+                    }
+                }
                 </style>
             </head>
             <body>
@@ -309,7 +442,7 @@ app.get("/info", async (req, res) => {
                 </div>
             </div>
         </header>
-
+<div class="container">
             <h1 class="h1-1">Convertir Youtube a MP4</h1>
             <p class="h1-1-1">Convierta YouTube a MP4 en 1080p, 2k, 4k, 8k en línea</p>
             <div class="container-principal">
@@ -319,11 +452,11 @@ app.get("/info", async (req, res) => {
                     </div>
                     
                     <div class="item">
-                        <span>${videoTitle}</span>
-                        <div class="info-row">
+                        <span class="nametit">${videoTitle}</span>
+                        <div class="info-row resname">
                             <span>${authorName}</span>
                         </div>
-                        <div class="info-row">
+                        <div class="info-row resname">
                             <span>${videoDuration}</span>
                         </div>
                         <form action="/download" method="get">
@@ -341,6 +474,7 @@ app.get("/info", async (req, res) => {
                         </form>
                     </div>
                 </div>
+            </div>
             </div>
 
             <div class="container ada">
